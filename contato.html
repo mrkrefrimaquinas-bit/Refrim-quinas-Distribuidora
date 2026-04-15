@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre em contato com a Refrimáquinas Distribuidora. Telefone, WhatsApp, endereço em Araguaína-TO e formulário de contato para orçamentos." />
+  <meta name="keywords" content="contato Refrimáquinas, orçamento refrigeração, telefone distribuidora Araguaína, WhatsApp refrigeração Tocantins" />
+  <title>Contato e Orçamento | Refrimáquinas Distribuidora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="img/icone-whatsapp.png" />
+  <link rel="apple-touch-icon" href="img/icone-whatsapp.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .horario-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border-radius: var(--radius-sm); overflow: hidden;
+      border: 1px solid var(--cinza-borda);
+    }
+    .horario-item {
+      padding: 12px 16px;
+      display: flex; justify-content: space-between;
+      font-size: .88rem;
+      border-bottom: 1px solid var(--cinza-borda);
+      border-right: 1px solid var(--cinza-borda);
+      background: var(--branco);
+    }
+    .horario-item:nth-child(even) { border-right: none; }
+    .horario-item:last-child, .horario-item:nth-last-child(2) { border-bottom: none; }
+    .horario-dia { font-weight: 700; color: var(--azul-escuro); }
+    .horario-hora { color: var(--azul-primario); font-weight: 600; }
+    .horario-fechado { color: var(--cinza-claro); font-weight: 400; }
+
+    .whatsapp-cta-card {
+      background: linear-gradient(135deg, #1a7a3c, #25d366);
+      border-radius: var(--radius-md); padding: 28px;
+      text-align: center; color: var(--branco);
+    }
+    .whatsapp-cta-card i { font-size: 2.5rem; margin-bottom: 12px; }
+    .whatsapp-cta-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+    .whatsapp-cta-card p { font-size: .85rem; color: rgba(255,255,255,.85); margin-bottom: 16px; }
+    .btn-whatsapp-full {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--branco); color: #1a7a3c;
+      padding: 12px 24px; border-radius: var(--radius-sm);
+      font-weight: 800; font-size: .95rem;
+      transition: all var(--transicao);
+    }
+    .btn-whatsapp-full:hover { background: rgba(255,255,255,.88); transform: translateY(-2px); }
+
+    .contact-two-col { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 4vw, 48px); align-items: start; }
+
+    @media (max-width: 900px) {
+      .contact-two-col { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .horario-grid { grid-template-columns: 1fr; }
+      .horario-item,
+      .horario-item:nth-child(even),
+      .horario-item[style*="grid-column"] {
+        border-right: none !important;
+      }
+      .horario-item:nth-last-child(2) {
+        border-bottom: 1px solid var(--cinza-borda);
+      }
+      .horario-item {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-whatsapp-full {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" role="navigation" aria-label="Menu principal">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/logo.png" alt="Refrimáquinas Distribuidora" class="navbar-logo-img" />
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <!-- <li><a href="produtos.html">Produtos</a></li> -->
+        <!-- <li><a href="blog.html">Blog</a></li> -->
+        <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        <li><a href="contato.html" class="ativo">Contato</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="https://wa.me/5563992940367" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <button class="navbar-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <!-- <a href="produtos.html">Produtos</a> -->
+    <!-- <a href="blog.html">Blog</a> -->
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    <a href="contato.html" class="ativo">Contato</a>
+    <div class="mobile-menu-cta"><a href="https://wa.me/5563992940367" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+  </nav>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<header class="page-hero page-hero--contato" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Localização">
+      <a href="index.html">Início</a><i class="fas fa-chevron-right"></i><span>Contato</span>
+    </nav>
+    <h1 class="page-hero-title" id="page-title">Fale Conosco</h1>
+    <p class="page-hero-sub">Solicite orçamento, tire dúvidas ou venha nos visitar em Araguaína-TO</p>
+  </div>
+</header>
+
+<!-- ========== CANAIS RÁPIDOS ========== -->
+<div class="quick-contact-strip" aria-label="Canais de atendimento">
+  <div class="container">
+    <div class="benefits-strip-inner contact-quick-links">
+      <a href="https://wa.me/5563992940367" target="_blank" rel="noopener" class="benefit-item" style="text-decoration:none;">
+        <i class="fab fa-whatsapp" style="font-size:1.4rem;"></i> WhatsApp: (63) 99294-0367
+      </a>
+      <div class="benefit-item">
+        <i class="fas fa-clock"></i> Seg–Sex: 7h30–18h30 | Sáb: 7h30–13h
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FORMULÁRIO + INFO ========== -->
+<section class="section-padding" aria-label="Formulário de contato e informações">
+  <div class="container">
+    <div class="contact-two-col">
+
+      <!-- Informações de contato -->
+      <aside>
+        <span class="badge">Informações</span>
+        <h2 class="section-title" style="text-align:left;font-size:1.8rem;">Onde Estamos e Como Falar</h2>
+        <div class="divider divider-left"></div>
+
+        <div class="contact-info-cards" style="margin-bottom:24px;">
+          <div class="contact-info-card">
+            <div class="contact-info-icon" style="background:var(--amarelo); color:var(--azul-escuro);"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-info-text">
+              <h3 style="font-size:1.1rem;font-weight:800;color:var(--azul-escuro);margin-bottom:8px;">WhatsApp</h3>
+              <a href="https://wa.me/5563992940367" target="_blank" rel="noopener">(63) 99294-0367</a>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-share-nodes"></i></div>
+            <div class="contact-info-text">
+              <h3 style="font-size:1.1rem;font-weight:800;color:var(--azul-escuro);margin-bottom:8px;">Redes Sociais</h3>
+              <a href="https://www.instagram.com/refrimaquinas.distribuidora/" target="_blank" rel="noopener">@refrimaquinas.distribuidora</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horários -->
+        <h3 style="font-size:.95rem;font-weight:800;color:var(--azul-escuro);margin-bottom:12px;"><i class="fas fa-clock" style="color:var(--azul-primario);"></i> Horário de Funcionamento</h3>
+        <div class="horario-grid" role="table" aria-label="Horários de funcionamento">
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Segunda-feira</span>
+            <span class="horario-hora">7h30 – 18h30</span>
+          </div>
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Terça-feira</span>
+            <span class="horario-hora">7h30 – 18h30</span>
+          </div>
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Quarta-feira</span>
+            <span class="horario-hora">7h30 – 18h30</span>
+          </div>
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Quinta-feira</span>
+            <span class="horario-hora">7h30 – 18h30</span>
+          </div>
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Sexta-feira</span>
+            <span class="horario-hora">7h30 – 18h30</span>
+          </div>
+          <div class="horario-item" role="row">
+            <span class="horario-dia">Sábado</span>
+            <span class="horario-hora">7h30 – 13h00</span>
+          </div>
+          <div class="horario-item" role="row" style="grid-column:1/-1;border-right:none;">
+            <span class="horario-dia">Domingo</span>
+            <span class="horario-fechado">Fechado</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp card -->
+        <div class="whatsapp-cta-card" style="margin-top:24px;">
+          <i class="fab fa-whatsapp"></i>
+          <h3>Atendimento pelo WhatsApp</h3>
+          <p>Mais rápido! Nos chame agora e receba seu orçamento em minutos.</p>
+          <a href="https://wa.me/5563992940367?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener" class="btn-whatsapp-full">
+            <i class="fab fa-whatsapp"></i> Iniciar Conversa
+          </a>
+        </div>
+      </aside>
+
+      <!-- Formulário de contato -->
+      <main>
+        <span class="badge badge-laranja">Formulário de Contato</span>
+        <h2 class="section-title" style="text-align:left;font-size:1.8rem;">Solicite um Orçamento</h2>
+        <div class="divider divider-left"></div>
+        <p style="color:var(--cinza-claro);font-size:.9rem;margin-bottom:28px;">
+          Preencha o formulário e nossa equipe entrará em contato em até <strong>1 hora útil</strong>.
+        </p>
+
+        <form id="formContatoWeb" class="contact-form-card" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome-contato">Nome completo *</label>
+              <input type="text" id="nome-contato" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="empresa-contato">Empresa (opcional)</label>
+              <input type="text" id="empresa-contato" name="empresa" placeholder="Nome da empresa" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email-contato">E-mail *</label>
+              <input type="email" id="email-contato" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="tel-contato">Telefone / WhatsApp *</label>
+              <input type="tel" id="tel-contato" name="telefone" placeholder="(00) 00000-0000" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="assunto-contato">Assunto *</label>
+            <select id="assunto-contato" name="assunto" required>
+              <option value="">Selecione o assunto</option>
+              <option value="orcamento">Solicitar Orçamento</option>
+              <option value="disponibilidade">Verificar Disponibilidade de Produto</option>
+              <option value="duvidas">Dúvidas Gerais</option>
+              <option value="parceria">Parceria Comercial</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="produto-contato">Produto(s) de interesse</label>
+            <input type="text" id="produto-contato" name="produto" placeholder="Ex: Compressor Embraco 1/4 HP, Gás R-410A..." />
+          </div>
+
+          <div class="form-group">
+            <label for="msg-contato">Mensagem *</label>
+            <textarea id="msg-contato" name="mensagem" placeholder="Descreva sua necessidade, quantidade desejada ou dúvida..." required style="min-height:140px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;font-weight:400;color:var(--cinza-medio);cursor:pointer;">
+              <input type="checkbox" id="politica" name="politica" required style="margin-top:4px;cursor:pointer;width:18px;height:18px;opacity:1;position:relative;z-index:10;" />
+              <span>Concordo em receber retorno da Refrimáquinas sobre minha solicitação e aceito os termos de uso dos meus dados conforme a LGPD.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-laranja btn-lg" style="width:100%;">
+            <i class="fas fa-paper-plane"></i> Enviar Solicitação
+          </button>
+        </form>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('formContatoWeb');
+            if (form) {
+              form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validação simples
+                if (!form.checkValidity()) {
+                  form.reportValidity();
+                  return;
+                }
+
+                var btn = form.querySelector('[type="submit"]');
+                var origText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecionando...';
+                btn.disabled = true;
+
+                // Captura dos dados
+                var nome = document.getElementById('nome-contato').value.trim();
+                var empresa = document.getElementById('empresa-contato').value.trim();
+                var email = document.getElementById('email-contato').value.trim();
+                var telefone = document.getElementById('tel-contato').value.trim();
+                var assuntoSelect = document.getElementById('assunto-contato');
+                var assunto = assuntoSelect.options[assuntoSelect.selectedIndex].text;
+                var produto = document.getElementById('produto-contato').value.trim();
+                var mensagem = document.getElementById('msg-contato').value.trim();
+
+                // Montagem da mensagem formatada para o WhatsApp
+                var texto = "*NOVA SOLICITAÇÃO REALIZADA NO SITE*\n\n";
+                texto += "👤 *Nome:* " + nome + "\n";
+                if (empresa) texto += "🏢 *Empresa:* " + empresa + "\n";
+                texto += "✉️ *E-mail:* " + email + "\n";
+                texto += "📱 *Telefone/WhatsApp:* " + telefone + "\n";
+                texto += "📌 *Assunto:* " + assunto + "\n";
+                if (produto) texto += "🛒 *Produto(s) de interesse:* " + produto + "\n";
+                texto += "\n💬 *Mensagem:*\n" + mensagem;
+
+                var numeroWa = "556334151900";
+                var url = "https://wa.me/" + numeroWa + "?text=" + encodeURIComponent(texto);
+                
+                setTimeout(function() {
+                  btn.innerHTML = origText;
+                  btn.disabled = false;
+                  window.location.href = url;
+                }, 800);
+              });
+            }
+          });
+        </script>
+
+
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NOSSAS LOJAS ========== -->
+<section aria-label="Nossas lojas" style="background:var(--cinza-bg);padding:80px 0;">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="badge">Onde Estamos</span>
+      <h2 class="section-title">Nossas Lojas</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Atendemos você em 5 unidades estratégicas nos estados do Tocantins, Pará e Maranhão.</p>
+    </div>
+
+      <div class="store-grid animate-on-scroll">
+
+      <!-- Araguaína-TO (Matriz) -->
+      <div style="background:var(--branco);border-radius:var(--radius-md);padding:28px;box-shadow:var(--sombra-leve);border-top:4px solid var(--azul-primario);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:44px;height:44px;background:var(--azul-primario);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-store"></i></div>
+          <div>
+            <div style="font-weight:800;color:var(--azul-escuro);font-size:1rem;">Araguaína, TO</div>
+            <div style="font-size:.75rem;background:var(--azul-primario);color:var(--branco);padding:2px 10px;border-radius:100px;display:inline-block;font-weight:700;margin-top:2px;">MATRIZ</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--azul-primario);margin-top:3px;flex-shrink:0;"></i>
+          <span style="font-size:.88rem;color:var(--cinza-medio);">Setor Sul, Rua Vitorino Freire, atrás da Praça do Galo, Araguaína, TO</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-phone" style="color:var(--azul-primario);flex-shrink:0;"></i>
+          <span style="font-size:.85rem;color:var(--cinza-claro);">(63) 3415-1900</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://wa.me/556334151900" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Fale com a loja</a>
+          <a href="https://maps.app.goo.gl/W2DQ11Rhy3MYNrVp7" target="_blank" rel="noopener" class="btn btn-outline-azul btn-sm"><i class="fas fa-map"></i> Ver no Mapa</a>
+        </div>
+      </div>
+
+      <!-- Canaã dos Carajás-PA -->
+      <div style="background:var(--branco);border-radius:var(--radius-md);padding:28px;box-shadow:var(--sombra-leve);border-top:4px solid var(--azul-claro);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:44px;height:44px;background:var(--azul-claro);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-store"></i></div>
+          <div style="font-weight:800;color:var(--azul-escuro);font-size:1rem;">Canaã dos Carajás, PA</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--azul-claro);margin-top:3px;flex-shrink:0;"></i>
+          <span style="font-size:.88rem;color:var(--cinza-medio);">Av. Weyne Cavalcante, Nº 153<br/>Alto Bonito II, Canaã dos Carajás, PA<br/>CEP 68.352-007</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-phone" style="color:var(--azul-claro);flex-shrink:0;"></i>
+          <span style="font-size:.85rem;color:var(--cinza-claro);">(94) 99161-1500</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://wa.me/5594991611500" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Fale com a loja</a>
+          <a href="https://maps.app.goo.gl/z293jHMmjSmi3rau8" target="_blank" rel="noopener" class="btn btn-outline-azul btn-sm"><i class="fas fa-map"></i> Ver no Mapa</a>
+        </div>
+      </div>
+
+      <!-- Marabá-PA -->
+      <div style="background:var(--branco);border-radius:var(--radius-md);padding:28px;box-shadow:var(--sombra-leve);border-top:4px solid var(--azul-claro);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:44px;height:44px;background:var(--azul-claro);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-store"></i></div>
+          <div style="font-weight:800;color:var(--azul-escuro);font-size:1rem;">Marabá, PA</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--azul-claro);margin-top:3px;flex-shrink:0;"></i>
+          <span style="font-size:.88rem;color:var(--cinza-medio);">Folha 28, Quadra 37, Lote 33 C<br/>Nova Marabá, Marabá, PA<br/>CEP 68.506-370</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-phone" style="color:var(--azul-claro);flex-shrink:0;"></i>
+          <span style="font-size:.85rem;color:var(--cinza-claro);">(94) 98196-6966</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://wa.me/5594981966966" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Fale com a loja</a>
+          <a href="https://maps.app.goo.gl/PWpwC68qC7Cv3QQh7" target="_blank" rel="noopener" class="btn btn-outline-azul btn-sm"><i class="fas fa-map"></i> Ver no Mapa</a>
+        </div>
+      </div>
+
+      <!-- Parauapebas-PA -->
+      <div style="background:var(--branco);border-radius:var(--radius-md);padding:28px;box-shadow:var(--sombra-leve);border-top:4px solid var(--azul-claro);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:44px;height:44px;background:var(--azul-claro);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-store"></i></div>
+          <div style="font-weight:800;color:var(--azul-escuro);font-size:1rem;">Parauapebas, PA</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--azul-claro);margin-top:3px;flex-shrink:0;"></i>
+          <span style="font-size:.88rem;color:var(--cinza-medio);">Rodo PA-160, S/N, Quadra 07G<br/>Cidade Jardim, Parauapebas, PA<br/>CEP 68.515-000</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-phone" style="color:var(--azul-claro);flex-shrink:0;"></i>
+          <span style="font-size:.85rem;color:var(--cinza-claro);">(94) 99190-5600</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://wa.me/5594991905600" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Fale com a loja</a>
+          <a href="https://maps.app.goo.gl/5yoK8mCeJnFrUche6" target="_blank" rel="noopener" class="btn btn-outline-azul btn-sm"><i class="fas fa-map"></i> Ver no Mapa</a>
+        </div>
+      </div>
+
+      <!-- Imperatriz-MA -->
+      <div style="background:var(--branco);border-radius:var(--radius-md);padding:28px;box-shadow:var(--sombra-leve);border-top:4px solid var(--azul-claro);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:44px;height:44px;background:var(--azul-claro);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-store"></i></div>
+          <div style="font-weight:800;color:var(--azul-escuro);font-size:1rem;">Imperatriz, MA</div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--azul-claro);margin-top:3px;flex-shrink:0;"></i>
+          <span style="font-size:.88rem;color:var(--cinza-medio);">R. Luís Domingues, 1871<br/>Centro, Imperatriz, MA<br/>CEP 65.901-430</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <i class="fas fa-phone" style="color:var(--azul-claro);flex-shrink:0;"></i>
+          <span style="font-size:.85rem;color:var(--cinza-claro);">(99) 3525-4160</span>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://wa.me/559935254160" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Fale com a loja</a>
+          <a href="https://maps.app.goo.gl/wGx7DkPUTktoKyGG7" target="_blank" rel="noopener" class="btn btn-outline-azul btn-sm"><i class="fas fa-map"></i> Ver no Mapa</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== CTA BANNER ========== -->
+<section class="cta-banner" aria-label="Chamada para ação">
+  <div class="container" style="position:relative;z-index:2">
+    <p class="cta-banner-title">Atendimento Rápido e Especializado</p>
+    <p class="cta-banner-sub">Nossa equipe está pronta para atender você agora. Chame no WhatsApp e receba seu orçamento em minutos.</p>
+    <div class="cta-banner-btns">
+      <a href="https://wa.me/5563992940367" target="_blank" rel="noopener" class="btn btn-laranja btn-lg"><i class="fab fa-whatsapp"></i> Falar Agora</a>
+      <!-- <a href="produtos.html" class="btn btn-outline btn-lg"><i class="fas fa-box-open"></i> Ver Produtos</a> -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer aria-label="Rodapé">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="img/logo.png" alt="Refrimáquinas" style="height:38px;width:auto;filter:brightness(0) invert(1);" /></div>
+          <p class="footer-desc">A distribuidora líder da região Norte. Mais de 17.000 produtos à pronta entrega.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/refrimaquinas.distribuidora/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/LojadoRefrigerista/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5563992940367" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <nav class="footer-col">
+          <div class="footer-col-title">Navegação</div>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Início</a></li>
+            <li><a href="sobre.html"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+            <!-- <li><a href="produtos.html"><i class="fas fa-chevron-right"></i> Produtos</a></li> -->
+            <!-- <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li> -->
+            <li><a href="trabalhe-conosco.html"><i class="fas fa-chevron-right"></i> Trabalhe Conosco</a></li>
+            <li><a href="contato.html"><i class="fas fa-chevron-right"></i> Contato</a></li>
+          </ul>
+        </nav>
+        <!--
+        <nav class="footer-col">
+          <div class="footer-col-title">Produtos</div>
+          <ul>
+            <li><a href="produtos.html?cat=refrigeracao"><i class="fas fa-chevron-right"></i> Refrigeração</a></li>
+            <li><a href="produtos.html?cat=climatizacao"><i class="fas fa-chevron-right"></i> Climatização</a></li>
+            <li><a href="produtos.html?cat=ferramentas"><i class="fas fa-chevron-right"></i> Ferramentas</a></li>
+            <li><a href="produtos.html?cat=epi"><i class="fas fa-chevron-right"></i> EPI</a></li>
+            <li><a href="produtos.html?cat=eletrica"><i class="fas fa-chevron-right"></i> Elétrica</a></li>
+            <li><a href="produtos.html?cat=soldagem"><i class="fas fa-chevron-right"></i> Soldagem</a></li>
+          </ul>
+        </nav>
+        -->
+        <address class="footer-col" style="font-style:normal">
+          <div class="footer-col-title">Contato</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Setor Sul, Rua Vitorino Freire, atrás da Praça do Galo<br />Araguaína — TO</span></div>
+            <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><span><a href="https://wa.me/5563992940367">(63) 99294-0367</a></span></div>
+            <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Seg–Sex: 7h30–18h30<br />Sáb: 7h30–13h</span></div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 Refrimáquinas Distribuidora LTDA. Todos os direitos reservados.</p>
+      <p>Araguaína — Tocantins | TO · PA · MA</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5563992940367" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+<div class="toast" role="alert" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

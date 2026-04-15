@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog TÃ©cnico da RefrimÃ¡quinas â€” Artigos sobre refrigeraÃ§Ã£o, climatizaÃ§Ã£o, manutenÃ§Ã£o preventiva, dicas para tÃ©cnicos e novidades do setor." />
+  <meta name="keywords" content="blog refrigeraÃ§Ã£o, dicas tÃ©cnico refrigeraÃ§Ã£o, manutenÃ§Ã£o ar condicionado, gÃ¡s refrigerante, compressor refrigeraÃ§Ã£o dicas" />
+  <title>Blog TÃ©cnico | RefrimÃ¡quinas Distribuidora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="img/icone-whatsapp.png" />
+  <link rel="apple-touch-icon" href="img/icone-whatsapp.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .blog-hero-article {
+      display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px;
+      margin-bottom: 56px;
+    }
+    .blog-featured-img {
+      border-radius: var(--radius-md); overflow: hidden; height: 340px;
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6rem; color: rgba(255,255,255,.5); position: relative;
+    }
+    .blog-featured-cat {
+      position: absolute; bottom: 16px; left: 16px;
+      background: var(--laranja); color: var(--branco);
+      font-size: .75rem; font-weight: 700; padding: 5px 14px; border-radius: 100px;
+    }
+    .blog-featured-body { display: flex; flex-direction: column; justify-content: center; }
+    .blog-featured-body .blog-card-meta { margin-bottom: 14px; }
+    .blog-featured-title { font-size: 1.6rem; font-weight: 800; color: var(--azul-escuro); line-height: 1.3; margin-bottom: 14px; }
+    .blog-featured-desc { font-size: .92rem; color: var(--cinza-claro); line-height: 1.7; margin-bottom: 20px; }
+
+    .blog-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .blog-tag {
+      padding: 6px 16px; border-radius: 100px;
+      border: 1.5px solid var(--cinza-borda);
+      background: var(--branco); color: var(--cinza-medio);
+      font-size: .8rem; font-weight: 700; cursor: pointer;
+      transition: all var(--transicao);
+    }
+    .blog-tag:hover, .blog-tag.ativo {
+      background: var(--azul-primario); border-color: var(--azul-primario); color: var(--branco);
+    }
+
+    .newsletter-box {
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul-primario));
+      border-radius: var(--radius-md); padding: 36px;
+      text-align: center; margin-top: 56px;
+    }
+    .newsletter-box h3 { color: var(--branco); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; }
+    .newsletter-box p { color: rgba(255,255,255,.75); font-size: .9rem; margin-bottom: 20px; }
+    .newsletter-form { display: flex; gap: 10px; max-width: 480px; margin: 0 auto; }
+    .newsletter-form input {
+      flex: 1; padding: 12px 16px;
+      border: none; border-radius: var(--radius-sm);
+      font-size: .9rem; font-family: inherit;
+    }
+    .newsletter-form input:focus { outline: none; }
+
+    @media (max-width: 1024px) {
+      .blog-hero-article { grid-template-columns: 1fr; }
+      .blog-featured-img { height: 280px; }
+    }
+
+    @media (max-width: 768px) {
+      .blog-featured-img { height: 220px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-box { padding: 28px 20px; }
+      .blog-tag { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" role="navigation" aria-label="Menu principal">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/logo.png" alt="RefrimÃ¡quinas Distribuidora" class="navbar-logo-img" />
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">InÃ­cio</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="blog.html" class="ativo">Blog</a></li>
+        <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="https://wa.me/556334151900" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <button class="navbar-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    <a href="index.html">InÃ­cio</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="blog.html" class="ativo">Blog</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    <a href="contato.html">Contato</a>
+    <div class="mobile-menu-cta"><a href="https://wa.me/556334151900" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+  </nav>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<header class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="LocalizaÃ§Ã£o">
+      <a href="index.html">InÃ­cio</a><i class="fas fa-chevron-right"></i><span>Blog</span>
+    </nav>
+    <h1 class="page-hero-title" id="page-title">Blog TÃ©cnico RefrimÃ¡quinas</h1>
+    <p class="page-hero-sub">Dicas, tutoriais e novidades do setor de refrigeraÃ§Ã£o e climatizaÃ§Ã£o</p>
+  </div>
+</header>
+
+<!-- ========== CONTEÃšDO DO BLOG ========== -->
+<section class="section-padding" aria-label="Artigos do blog">
+  <div class="container">
+
+    <!-- Tags filtro -->
+    <nav class="blog-tags" aria-label="Filtrar artigos por categoria">
+      <button class="blog-tag ativo" data-tag="todos">Todos</button>
+      <button class="blog-tag" data-tag="refrigeracao">RefrigeraÃ§Ã£o</button>
+      <button class="blog-tag" data-tag="climatizacao">ClimatizaÃ§Ã£o</button>
+      <button class="blog-tag" data-tag="manutencao">ManutenÃ§Ã£o</button>
+      <button class="blog-tag" data-tag="dicas">Dicas TÃ©cnicas</button>
+      <button class="blog-tag" data-tag="produtos">Produtos em Destaque</button>
+      <button class="blog-tag" data-tag="mercado">Mercado</button>
+    </nav>
+
+    <!-- ARTIGO DESTAQUE -->
+    <article class="blog-hero-article animate-on-scroll">
+      <div class="blog-featured-img" aria-hidden="true">
+        <i class="fas fa-snowflake"></i>
+        <span class="blog-featured-cat">ManutenÃ§Ã£o</span>
+      </div>
+      <div class="blog-featured-body">
+        <div class="blog-card-meta">
+          <span><i class="fas fa-calendar-alt"></i> 10 Jan 2025</span>
+          <span><i class="fas fa-clock"></i> 8 min de leitura</span>
+        </div>
+        <h2 class="blog-featured-title">ManutenÃ§Ã£o Preventiva em Sistemas de RefrigeraÃ§Ã£o: O Guia Completo para TÃ©cnicos</h2>
+        <p class="blog-featured-desc">
+          Descubra como implementar um plano de manutenÃ§Ã£o preventiva eficiente para cÃ¢maras frias, refrigeradores comerciais e sistemas de climatizaÃ§Ã£o industrial. Evite paradas, reduza custos e aumente a vida Ãºtil dos equipamentos.
+        </p>
+        <a href="#" class="btn btn-primario"><i class="fas fa-book-open"></i> Ler Artigo Completo</a>
+      </div>
+    </article>
+
+    <!-- GRID DE ARTIGOS -->
+    <div class="blog-grid" id="blog-grid">
+
+      <article class="blog-card" data-tag="refrigeracao">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#0d3d6e,#1e88e5);">
+          <i class="fas fa-cog" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">RefrigeraÃ§Ã£o</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 05 Jan 2025</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+          </div>
+          <h3 class="blog-card-title">Como escolher o compressor certo para cÃ¢maras frias e refrigeraÃ§Ã£o comercial</h3>
+          <p class="blog-card-desc">Entenda os principais parÃ¢metros de seleÃ§Ã£o: BTU, temperatura de evaporaÃ§Ã£o, tipo de gÃ¡s e potÃªncia elÃ©trica.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="manutencao">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#1b5e20,#43a047);">
+          <i class="fas fa-wrench" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">ManutenÃ§Ã£o</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 28 Dez 2024</span>
+            <span><i class="fas fa-clock"></i> 5 min</span>
+          </div>
+          <h3 class="blog-card-title">7 erros que tÃ©cnicos cometem ao fazer a carga de gÃ¡s refrigerante</h3>
+          <p class="blog-card-desc">Aprenda a evitar os erros mais comuns ao trabalhar com R-134a, R-410A e R-32 para garantir a eficiÃªncia do sistema.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="climatizacao">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#006064,#00acc1);">
+          <i class="fas fa-wind" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">ClimatizaÃ§Ã£o</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 20 Dez 2024</span>
+            <span><i class="fas fa-clock"></i> 7 min</span>
+          </div>
+          <h3 class="blog-card-title">Ar-condicionado Inverter vs Convencional: qual instalar no comÃ©rcio?</h3>
+          <p class="blog-card-desc">ComparaÃ§Ã£o completa entre as duas tecnologias: consumo, custo-benefÃ­cio, manutenÃ§Ã£o e quando cada uma Ã© indicada.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="dicas">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#4a148c,#7b1fa2);">
+          <i class="fas fa-lightbulb" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">Dicas TÃ©cnicas</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 15 Dez 2024</span>
+            <span><i class="fas fa-clock"></i> 4 min</span>
+          </div>
+          <h3 class="blog-card-title">Como usar um manifold digital corretamente: passo a passo para tÃ©cnicos</h3>
+          <p class="blog-card-desc">Guia prÃ¡tico para uso do manifold digital com leitura de pressÃ£o, temperatura e superheat em sistemas de refrigeraÃ§Ã£o.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="produtos">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#e65100,#ff9800);">
+          <i class="fas fa-star" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">Produtos em Destaque</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 08 Dez 2024</span>
+            <span><i class="fas fa-clock"></i> 3 min</span>
+          </div>
+          <h3 class="blog-card-title">Linha Makita: por que os profissionais de refrigeraÃ§Ã£o preferem as ferramentas da marca</h3>
+          <p class="blog-card-desc">ConheÃ§a os modelos mais usados por tÃ©cnicos de refrigeraÃ§Ã£o e climatizaÃ§Ã£o e por que a Makita lidera o mercado profissional.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="mercado">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#263238,#455a64);">
+          <i class="fas fa-chart-line" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">Mercado</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 01 Dez 2024</span>
+            <span><i class="fas fa-clock"></i> 6 min</span>
+          </div>
+          <h3 class="blog-card-title">Mercado de refrigeraÃ§Ã£o no Norte do Brasil: oportunidades e tendÃªncias para 2025</h3>
+          <p class="blog-card-desc">AnÃ¡lise do crescimento do setor, demandas regionais, novos gases e o que esperar para o mercado de refrigeraÃ§Ã£o e climatizaÃ§Ã£o na regiÃ£o Norte.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="manutencao">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#880e4f,#e91e63);">
+          <i class="fas fa-shield-halved" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">ManutenÃ§Ã£o</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 25 Nov 2024</span>
+            <span><i class="fas fa-clock"></i> 5 min</span>
+          </div>
+          <h3 class="blog-card-title">Limpeza e higienizaÃ§Ã£o de evaporadores: frequÃªncia, produtos e tÃ©cnica correta</h3>
+          <p class="blog-card-desc">Protocolos de higienizaÃ§Ã£o para evaporadores em cÃ¢maras frias, supermercados e restaurantes conforme normas sanitÃ¡rias vigentes.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="dicas">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#1a237e,#3949ab);">
+          <i class="fas fa-fire-flame-curved" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">Dicas TÃ©cnicas</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 18 Nov 2024</span>
+            <span><i class="fas fa-clock"></i> 4 min</span>
+          </div>
+          <h3 class="blog-card-title">Solda em cobre: tÃ©cnicas, maÃ§aricos e como evitar oxidaÃ§Ã£o nas tubulaÃ§Ãµes</h3>
+          <p class="blog-card-desc">Dicas prÃ¡ticas de soldagem em tubulaÃ§Ãµes de cobre para sistemas frigorÃ­ficos: temperatura, ligas de solda e pastas decapantes.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-tag="refrigeracao">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#01579b,#0288d1);">
+          <i class="fas fa-temperature-low" style="color:rgba(255,255,255,.5)"></i>
+          <span class="blog-card-cat">RefrigeraÃ§Ã£o</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span><i class="fas fa-calendar-alt"></i> 10 Nov 2024</span>
+            <span><i class="fas fa-clock"></i> 7 min</span>
+          </div>
+          <h3 class="blog-card-title">CÃ¢maras frias para pequenos negÃ³cios: como dimensionar e escolher equipamentos</h3>
+          <p class="blog-card-desc">Guia completo para dimensionamento de cÃ¢maras frias para aÃ§ougues, padarias, restaurantes e pequenos mercados.</p>
+          <a href="#" class="blog-card-link">Ler mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- PaginaÃ§Ã£o -->
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:48px;">
+      <button style="width:40px;height:40px;border-radius:var(--radius-sm);border:1.5px solid var(--azul-primario);background:var(--azul-primario);color:var(--branco);font-weight:700;cursor:pointer;">1</button>
+      <button style="width:40px;height:40px;border-radius:var(--radius-sm);border:1.5px solid var(--cinza-borda);background:var(--branco);color:var(--cinza-medio);font-weight:700;cursor:pointer;">2</button>
+      <button style="width:40px;height:40px;border-radius:var(--radius-sm);border:1.5px solid var(--cinza-borda);background:var(--branco);color:var(--cinza-medio);font-weight:700;cursor:pointer;">3</button>
+      <button style="width:40px;height:40px;border-radius:var(--radius-sm);border:1.5px solid var(--cinza-borda);background:var(--branco);color:var(--cinza-medio);cursor:pointer;"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter-box animate-on-scroll">
+      <h3><i class="fas fa-bell"></i> Receba conteÃºdo tÃ©cnico gratuito</h3>
+      <p>Cadastre seu e-mail e fique por dentro das novidades do setor, dicas de manutenÃ§Ã£o e promoÃ§Ãµes da RefrimÃ¡quinas.</p>
+      <form class="newsletter-form" data-form="newsletter" novalidate>
+        <input type="email" placeholder="Digite seu melhor e-mail" required aria-label="E-mail para newsletter" />
+        <button type="submit" class="btn btn-laranja"><i class="fas fa-paper-plane"></i> Cadastrar</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== CTA BANNER ========== -->
+<section class="cta-banner" aria-label="Chamada para aÃ§Ã£o">
+  <div class="container" style="position:relative;z-index:2">
+    <p class="cta-banner-title">Precisa de ajuda com seu projeto?</p>
+    <p class="cta-banner-sub">Nossa equipe estÃ¡ pronta para tirar suas dÃºvidas e ajudar a encontrar o produto certo para sua demanda.</p>
+    <div class="cta-banner-btns">
+      <a href="https://wa.me/556334151900" target="_blank" rel="noopener" class="btn btn-laranja btn-lg"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
+      <a href="produtos.html" class="btn btn-outline btn-lg"><i class="fas fa-box-open"></i> Ver Produtos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer aria-label="RodapÃ©">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="img/logo.png" alt="RefrimÃ¡quinas" style="height:38px;width:auto;filter:brightness(0) invert(1);" /></div>
+          <p class="footer-desc">A distribuidora lÃ­der da regiÃ£o Norte. Mais de 17.000 produtos Ã  pronta entrega.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/refrimaquinas.distribuidora/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/LojadoRefrigerista/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/556334151900" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <nav class="footer-col">
+          <div class="footer-col-title">NavegaÃ§Ã£o</div>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> InÃ­cio</a></li>
+            <li><a href="sobre.html"><i class="fas fa-chevron-right"></i> Sobre</a></li>
+            <li><a href="produtos.html"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="trabalhe-conosco.html"><i class="fas fa-chevron-right"></i> Trabalhe Conosco</a></li>
+            <li><a href="contato.html"><i class="fas fa-chevron-right"></i> Contato</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col">
+          <div class="footer-col-title">Categorias do Blog</div>
+          <ul>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> RefrigeraÃ§Ã£o</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> ClimatizaÃ§Ã£o</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> ManutenÃ§Ã£o</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Dicas TÃ©cnicas</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Mercado</a></li>
+          </ul>
+        </nav>
+        <address class="footer-col" style="font-style:normal">
+          <div class="footer-col-title">Contato</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Av. Santos Dumont, 107 â€” AraguaÃ­na-TO</span></div>
+            <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Segâ€“Sex: 7h30 Ã s 18h30 | SÃ¡b: 7h30 Ã s 13h</span></div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>Â© 2025 RefrimÃ¡quinas Distribuidora LTDA. Todos os direitos reservados.</p>
+      <p>TO Â· PA Â· MA</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/556334151900" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+<div class="toast" role="alert" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+<script>
+  // Filtro por tag do blog
+  document.querySelectorAll('.blog-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.blog-tag').forEach(t => t.classList.remove('ativo'));
+      tag.classList.add('ativo');
+      const filter = tag.getAttribute('data-tag');
+      document.querySelectorAll('#blog-grid .blog-card').forEach(card => {
+        const cardTag = card.getAttribute('data-tag');
+        card.style.display = (filter === 'todos' || cardTag === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
+
